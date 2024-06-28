@@ -1,15 +1,15 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPause } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
-import { Button } from "flowbite-react";
 import { Outlet } from "react-router-dom";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
-   
-    <Outlet/>
+      <main className="mx-4  lg:mx-12  2xl:mx-20  min-h-96 ">
+        <Header />
 
+        <Outlet />
+      </main>
     </>
   );
 }
