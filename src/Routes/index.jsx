@@ -7,7 +7,7 @@ export const Router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <Navigate to={"movies"} /> },
-      { path: "movies", element: <p>movies</p> },
+      { path: "Movies", element: <p>movies</p> },
     ],
   },
 ]);
