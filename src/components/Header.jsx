@@ -18,17 +18,17 @@ export default function Header() {
           <div>
             <img src={logo} alt="Logo" className="w-28 lg:w-36 2xl:w-48" />
           </div>
-          <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2">
+          <div className="hidden lg:block absolute left-1/2 transform top-4 -translate-x-1/2">
             <NavButtons />
           </div>
           <div className="hidden lg:flex gap-6">
             <FontAwesomeIcon
               icon={faMagnifyingGlass}
-              className="text-white cursor-pointer transition duration-200 transform hover:text-gray-400 hover:scale-110"
+              className="text-white cursor-pointer transition duration-100 transform hover:text-gray-400 hover:scale-110"
             />
             <FontAwesomeIcon
               icon={faBell}
-              className="text-white cursor-pointer transition duration-200 transform hover:text-gray-400 hover:scale-110"
+              className="text-white cursor-pointer transition duration-100 transform hover:text-gray-400 hover:scale-110"
             />
           </div>
           <div className="block lg:hidden">

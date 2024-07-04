@@ -19,7 +19,7 @@ export default function NavButtons() {
           key={nav.name}
           to={nav.path}
           aria-current="page"
-          className={`px-4 py-2 text-xs lg:text-xs font-medium text-white  rounded-lg hover:bg-zinc-900 focus:z-10 focus:ring-2 focus:ring-zinc-900 focus:text-gray-400 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white ${
+          className={`px-2 lg:px-4 py-2 text-xs lg:text-sm  2xl:text-lg font-medium text-white  rounded-lg hover:bg-zinc-900  ${
             nav.path === currentLocation && "bg-zinc-900"
           }`}
         >
@@ -30,7 +30,7 @@ export default function NavButtons() {
   };
   return (
     <>
-      <div className=" inline-flex flex-col lg:flex-row rounded-lg shadow-sm  bg-stone-950 lg:border lg:border-stone-700 gap-1  p-2">
+      <div className=" inline-flex flex-col lg:flex-row rounded-lg shadow-sm  bg-stone-950 lg:border lg:border-stone-700 gap-1  p-2 ">
         {navButtonCreator()}
       </div>
     </>
