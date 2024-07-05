@@ -26,12 +26,14 @@ export default function Header() {
               icon={faMagnifyingGlass}
               className="text-white cursor-pointer transition duration-100 transform hover:text-gray-400 hover:scale-110"
             />
+            
             <FontAwesomeIcon
               icon={faBell}
               className="text-white cursor-pointer transition duration-100 transform hover:text-gray-400 hover:scale-110"
             />
+            
           </div>
-          <div className="block lg:hidden">
+          <div className="block lg:hidden ">
             <FontAwesomeIcon
               icon={faBars}
               onClick={() => {
