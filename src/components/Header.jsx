@@ -24,14 +24,13 @@ export default function Header() {
           <div className="hidden lg:flex gap-6">
             <FontAwesomeIcon
               icon={faMagnifyingGlass}
-              className="text-white cursor-pointer transition duration-100 transform hover:text-gray-400 hover:scale-110"
+              className="text-white cursor-pointer  duration-100  hover:text-gray-400 hover:scale-110"
             />
-            
+
             <FontAwesomeIcon
               icon={faBell}
-              className="text-white cursor-pointer transition duration-100 transform hover:text-gray-400 hover:scale-110"
+              className="text-white cursor-pointer  duration-100  hover:text-gray-400 hover:scale-110"
             />
-            
           </div>
           <div className="block lg:hidden ">
             <FontAwesomeIcon

@@ -11,7 +11,7 @@ export default function SuggestedMovies() {
   return (
     <>
       <div
-        className="relative bg-cover bg-center h-468 lg:h-709 2xl:h-835 rounded-lg"
+        className="relative bg-cover bg-center h-468 lg:h-709 2xl:h-835 rounded-lg mb-10"
         style={{ backgroundImage: `url(${sample})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-[#141414ff] to-[#14141400] rounded-lg"></div>
@@ -31,7 +31,7 @@ export default function SuggestedMovies() {
               <FontAwesomeIcon icon={faPlay} />
               <p>Play Now</p>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-1">
               <FontAwesomeIcon
                 icon={faPlus}
                 className="bg-black p-3 rounded-lg border border-stone-700 hover:cursor-pointer hover:scale-105"
