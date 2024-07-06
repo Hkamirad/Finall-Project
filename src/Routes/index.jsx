@@ -1,5 +1,6 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import App from "../App";
+import MoviesPage from "../components/Moviespage";
 
 export const Router = createBrowserRouter([
   {
@@ -9,9 +10,7 @@ export const Router = createBrowserRouter([
       { index: true, element: <Navigate to={"movies"} /> },
       {
         path: "Movies",
-        element: (
-          <p className="text-white mt-6">Movies component comming soon!</p>
-        ),
+        element: <MoviesPage />,
       },
       {
         path: "Home",

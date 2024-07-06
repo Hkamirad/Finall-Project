@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <>
-      <header>
+      <header className="mb-10 lg:mb-12 2xl:mb-14">
         <div className="flex items-center justify-between text-white">
           <div>
             <img src={logo} alt="Logo" className="w-28 lg:w-36 2xl:w-48" />
