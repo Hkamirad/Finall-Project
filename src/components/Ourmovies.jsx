@@ -9,7 +9,7 @@ export default function OurMovies() {
         </div>
         <h4 className=" font-bold mt-2 mb-5">Our Movies</h4>
         <div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 ">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 2xl:gap-5 ">
             <MovieCard />
             <MovieCard />
             <MovieCard />
@@ -24,6 +24,7 @@ export default function OurMovies() {
             <MovieCard />
             <MovieCard />
             <MovieCard />
+            
           </div>
         </div>
       </div>
