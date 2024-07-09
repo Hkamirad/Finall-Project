@@ -1,4 +1,5 @@
 import MovieCard from "./Moviecard";
+import Pagination from "./Pagination";
 export default function OurMovies() {
   return (
     <>
@@ -24,7 +25,9 @@ export default function OurMovies() {
             <MovieCard />
             <MovieCard />
             <MovieCard />
-            
+          </div>
+          <div className="flex justify-center mt-10">
+            <Pagination />
           </div>
         </div>
       </div>
