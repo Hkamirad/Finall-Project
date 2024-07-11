@@ -1,4 +1,4 @@
-import logo from "../assets/logo/logo.png";
+import logo from "../../assets/logo/logo.png";
 import NavButtons from "./Navbuttons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

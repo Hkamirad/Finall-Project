@@ -9,7 +9,7 @@ export default function FreeTrial() {
       >
         <div className="relative  z-10 h-full flex flex-col lg:flex-row justify-center lg:justify-between items-center p-4 px-8 lg:px-20 2xl:px-28 gap-16  text-white ">
           <div className="flex flex-col gap-4  items-center lg:items-start ">
-            <h4 className="font-bold text-2xl 2xl:text-4xl">Start your free trial today!</h4>
+            <h4 className="font-bold text-2xl 2xl:text-4xl text-center">Start your free trial today!</h4>
             <p className="text-neutral-400 text-center lg:text-start">
               {" "}
               This is a clear and concise call to action that encourages users

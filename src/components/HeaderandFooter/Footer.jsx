@@ -1,6 +1,6 @@
-import facebookLogo from "../assets/facebookLogo.png";
-import twitterLogo from "../assets/twitterLogo.png";
-import linkedinLogo from "../assets/LinkedinLogo.png";
+import facebookLogo from "../../assets/facebookLogo.png";
+import twitterLogo from "../../assets/twitterLogo.png";
+import linkedinLogo from "../../assets/LinkedinLogo.png";
 export default function Footer() {
   const footerFeatureCreator = (feature = "", subFeatures = []) => {
     return (
