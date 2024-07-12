@@ -1,6 +1,9 @@
 import directorsample from "../../assets/directorsample.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar,faCalendar,faLanguage,faThLarge } from "@fortawesome/free-solid-svg-icons";
+
+
+
 
 export default function MovieData() {
   const blackTextCardCreator = (texts = []) => {
@@ -36,23 +39,23 @@ export default function MovieData() {
   return (
     <>
       <div>
-        <h5 className="text-neutral-400 mb-1 lg:mb-2">Released Year</h5>
+        <h5 className="text-neutral-400 mb-1 lg:mb-2"><FontAwesomeIcon icon={faCalendar}/> Released Year</h5>
         <p>2022</p>
       </div>
       <div>
-        <h5 className="text-neutral-400 mb-2 lg:mb-2">Available Languages</h5>
+        <h5 className="text-neutral-400 mb-2 lg:mb-2"><FontAwesomeIcon icon={faLanguage}/> Available Languages</h5>
         <div className="flex gap-1 lg:gap-2 flex-wrap">
           {blackTextCardCreator(["English", "Hindi", "Presian", "French"])}
         </div>
       </div>
       <div>
-        <h5 className="text-neutral-400 mb-2 lg:mb-2">Ratings</h5>
+        <h5 className="text-neutral-400 mb-2 lg:mb-2"><FontAwesomeIcon icon={faStar}/> Ratings</h5>
         <div className=" flex gap-4 flex-wrap">
           {ratingCreator(["IMDB", "Streamvibe"])}
         </div>
       </div>
       <div>
-        <h5 className="text-neutral-400 mb-2 lg:mb-2">Gernes</h5>
+        <h5 className="text-neutral-400 mb-2 lg:mb-2"><FontAwesomeIcon icon={faThLarge}/> Gernes</h5>
         <div className="flex gap-1 lg:gap-2  flex-wrap">
           {blackTextCardCreator(["Action", "Advanture"])}
         </div>
