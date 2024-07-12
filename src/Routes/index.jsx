@@ -1,6 +1,6 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import MoviesPage from "../components/Moviespage";
+import MoviesPage from "../components/moviesPage/Moviespage";
 import SelectedMovie from "../components/openMoviePage/Selectedmoviepage";
 
 export const Router = createBrowserRouter([

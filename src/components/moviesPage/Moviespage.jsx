@@ -1,7 +1,7 @@
-import HighlightedMovie from "./Highlightedmovie";
+import HighlightedMovie from "../Highlightedmovie";
 import OurMovies from "./Ourmovies";
-import FreeTrial from "./Freetrial";
-import avengersImage from "../assets/suggestedMovieSample.png";
+import FreeTrial from "../Freetrial";
+import avengersImage from "../../assets/suggestedMovieSample.png";
 
 export default function MoviesPage() {
   const item = [

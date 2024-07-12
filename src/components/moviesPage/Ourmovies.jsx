@@ -1,5 +1,5 @@
 import MovieCard from "./Moviecard";
-import Pagination from "./Pagination";
+import Pagination from "../Pagination";
 export default function OurMovies() {
   return (
     <>

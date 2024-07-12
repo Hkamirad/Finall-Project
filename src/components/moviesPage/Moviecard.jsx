@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import sample from "../assets/Ourmoviesmaple.png";
+import sample from "../../assets/Ourmoviesmaple.png";
 import { faClock, faStar } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 export default function MovieCard() {
