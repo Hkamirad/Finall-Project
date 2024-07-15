@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faStar } from "@fortawesome/free-solid-svg-icons";
+import Pagination from "../Pagination";
 export default function Reviews() {
   const reviewCreator = (name, country, review) => {
     return (
@@ -30,7 +31,7 @@ export default function Reviews() {
 
   return (
     <>
-      <div className="bg-neutral-800 rounded-lg border border-neutral-700 p-6 flex flex-col gap-6 lg:gap-8">
+      <div className="bg-neutral-800 rounded-lg border border-neutral-700 p-6 flex flex-col gap-6 lg:gap-8 ">
         <div className="flex justify-between items-center">
           <h5 className="text-neutral-400">Reviews</h5>
           <div className="bg-neutral-900 p-2 rounded-lg border border-neutral-700 flex gap-2 items-center cursor-pointer hover:scale-105">
@@ -49,6 +50,9 @@ export default function Reviews() {
             "India",
             " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut repudiandae unde sapiente eaque ducimus aperiam, similique officiis recusandae tenetur doloribus"
           )}
+        </div>
+        <div className="text-center">
+        <Pagination/>
         </div>
       </div>
     </>

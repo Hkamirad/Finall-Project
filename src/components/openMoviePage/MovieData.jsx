@@ -51,7 +51,7 @@ export default function MovieData() {
       <div>
         <h5 className="text-neutral-400 mb-2 lg:mb-2"><FontAwesomeIcon icon={faStar}/> Ratings</h5>
         <div className=" flex gap-4 flex-wrap">
-          {ratingCreator(["IMDB", "Streamvibe"])}
+          {ratingCreator(["IMDB", "Streamvibe",])}
         </div>
       </div>
       <div>
