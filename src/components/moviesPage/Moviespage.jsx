@@ -1,25 +1,23 @@
 import HighlightedMovie from "../Highlightedmovie";
 import OurMovies from "./Ourmovies";
 import FreeTrial from "../Freetrial";
-import avengersImage from "../../assets/suggestedMovieSample.png";
+import { useState } from "react";
 
-export default function MoviesPage() {
-  const item = [
-    {
-      name: "Avengers : Endgame",
-      description:
-        "With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos's actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face... Avenge the fallen.",
-      image: avengersImage,
-    },
-  ];
+export default function MoviesPage({ movies=[], metaData, page = 1,onPageChange }) {
+  // const [currentPage , setCurrentPage] = useState(Number(metaData.current_page))
+  const totalPages = metaData.page_count
+
+  const item = movies.slice(0, 5).map((movie) => ({
+    name: movie.title,
+    description: movie.year,
+    image: movie.images[0],
+  }));
+  
+  
   return (
     <>
-      <HighlightedMovie
-        name={item[0].name}
-        image={item[0].image}
-        description={item[0].description}
-      />
-      <OurMovies />
+      <HighlightedMovie movie={item} />
+      <OurMovies movies={movies} currentPage={page} totalPages={totalPages} onPageChange={onPageChange}/>
       <FreeTrial />
     </>
   );

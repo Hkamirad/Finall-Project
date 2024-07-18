@@ -1,7 +1,8 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import MoviesPage from "../components/moviesPage/Moviespage";
 import SelectedMovie from "../components/openMoviePage/Selectedmoviepage";
+import { loader as moviesLoader } from "./MoviesPageRout";
+import MoviesPageRout from "./MoviesPageRout";
 
 export const Router = createBrowserRouter([
   {
@@ -11,12 +12,14 @@ export const Router = createBrowserRouter([
       { index: true, element: <Navigate to={"movies"} /> },
       {
         path: "Movies",
-        element: <MoviesPage />,
+        element: <MoviesPageRout />,
+        loader: moviesLoader,
       },
       {
         path: "movies/:movieName",
         element: <SelectedMovie />,
       },
+
       {
         path: "Home",
         element: (

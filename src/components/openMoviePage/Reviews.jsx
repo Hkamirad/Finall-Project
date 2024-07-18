@@ -22,7 +22,7 @@ export default function Reviews() {
           </div>
           <div>
             {" "}
-            <p className="text-neutral-400">{review}</p>
+            <p className="text-neutral-400 text-sm lg:text-base">{review}</p>
           </div>
         </div>
       </>
@@ -52,7 +52,7 @@ export default function Reviews() {
           )}
         </div>
         <div className="text-center">
-        <Pagination/>
+        <Pagination currentPage={1} totalPages={2}/>
         </div>
       </div>
     </>

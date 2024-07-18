@@ -18,7 +18,7 @@ export default function Cast() {
   return (
     <>
       {" "}
-      <div className="bg-neutral-800 rounded-lg border border-neutral-700 flex flex-col gap-2 lg:gap-3 p-6">
+      <div className="bg-neutral-800 rounded-lg border border-neutral-700 flex flex-col gap-2 lg:gap-3 p-6 ">
         <div className="flex justify-between items-center mb-2">
           <h5 className="text-neutral-400">Cast</h5>
           <div className="flex gap-2 lg:gap-3 text-neutral-400">

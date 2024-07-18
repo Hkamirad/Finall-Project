@@ -3,6 +3,7 @@ import HighlightedMovie from "../Highlightedmovie";
 import Kantrabanner from "../../assets/Kantrabanner.png";
 import MovieDetails from "./Moviedetails";
 
+
 export default function SelectedMovie() {
   const scrollToTop = () => {
     window.scrollTo({
@@ -23,9 +24,7 @@ export default function SelectedMovie() {
   return (
     <>
       <HighlightedMovie
-        name={item[0].name}
-        image={item[0].image}
-        description={item[0].description}
+       movie={item}
       />
       <MovieDetails />
 

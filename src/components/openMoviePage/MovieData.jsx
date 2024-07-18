@@ -4,7 +4,6 @@ import { faStar,faCalendar,faLanguage,faThLarge } from "@fortawesome/free-solid-
 
 
 
-
 export default function MovieData() {
   const blackTextCardCreator = (texts = []) => {
     return texts.map((text) => {
@@ -38,6 +37,7 @@ export default function MovieData() {
 
   return (
     <>
+    
       <div>
         <h5 className="text-neutral-400 mb-1 lg:mb-2"><FontAwesomeIcon icon={faCalendar}/> Released Year</h5>
         <p>2022</p>
