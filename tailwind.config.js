@@ -10,8 +10,8 @@ export default {
         709: "709px",
         835: "835px",
       },
-      fontSize:{
-        zero: "0rem"
+      fontSize: {
+        zero: "0rem",
       },
     },
   },

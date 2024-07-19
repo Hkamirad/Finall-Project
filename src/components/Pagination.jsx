@@ -30,25 +30,30 @@ const customTheme = {
 
 const highlightedMovieTheme = {
   ...customTheme,
-  pages:{
+  pages: {
     ...customTheme.pages,
-    previous:{
+    previous: {
       ...customTheme.pages.previous,
-      base:"absolute bottom-0 left-5 ml-0 lg:rounded-full lg:border lg:border-neutral-600 lg:bg-neutral-800 lg:mr-2 lg:px-3 lg:py-3 leading-tight text-gray-500 lg:enabled:hover:bg-neutral-600 enabled:hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 enabled:dark:hover:bg-gray-700 enabled:dark:hover:text-white"
+      base: "absolute bottom-0 left-5 ml-0 lg:rounded-full lg:border lg:border-neutral-600 lg:bg-neutral-800 lg:mr-2 lg:px-3 lg:py-3 leading-tight text-gray-500 lg:enabled:hover:bg-neutral-600 enabled:hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 enabled:dark:hover:bg-gray-700 enabled:dark:hover:text-white",
     },
-    next:{
+    next: {
       ...customTheme.pages.previous,
-      base:"absolute bottom-0 right-5 ml-0 lg:rounded-full lg:border lg:border-neutral-600 lg:bg-neutral-800 lg:mr-2 lg:px-3 lg:py-3 leading-tight text-gray-500 lg:enabled:hover:bg-neutral-600 enabled:hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 enabled:dark:hover:bg-gray-700 enabled:dark:hover:text-white"
-    }
-  }
-}
-export default function Pagination({ currentPage, totalPages, onPageChange, HighlightedMovies}) {
+      base: "absolute bottom-0 right-5 ml-0 lg:rounded-full lg:border lg:border-neutral-600 lg:bg-neutral-800 lg:mr-2 lg:px-3 lg:py-3 leading-tight text-gray-500 lg:enabled:hover:bg-neutral-600 enabled:hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 enabled:dark:hover:bg-gray-700 enabled:dark:hover:text-white",
+    },
+  },
+};
+export default function Pagination({
+  currentPage,
+  totalPages,
+  onPageChange,
+  HighlightedMovies,
+}) {
   return (
     <FlowbitePagination
       currentPage={currentPage}
       totalPages={totalPages}
       onPageChange={onPageChange}
-      theme={!HighlightedMovies ? customTheme : highlightedMovieTheme  }
+      theme={!HighlightedMovies ? customTheme : highlightedMovieTheme}
       color="primary"
       className="text-zero "
       showIcons

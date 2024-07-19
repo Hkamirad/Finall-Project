@@ -1,7 +1,12 @@
 import MovieCard from "./Moviecard";
 import Pagination from "../Pagination";
 
-export default function OurMovies({ movies, currentPage, totalPages,onPageChange }) {
+export default function OurMovies({
+  movies,
+  currentPage,
+  totalPages,
+  onPageChange,
+}) {
   return (
     <>
       <div className="my-10 border border-stone-700 rounded-lg p-6 text-white mb-4 relative">
@@ -15,17 +20,24 @@ export default function OurMovies({ movies, currentPage, totalPages,onPageChange
             {movies.map((movie) => {
               return (
                 <div key={movie.id}>
-                  <MovieCard poster={movie.poster} title={movie.title} />
+                  <MovieCard
+                    poster={movie.poster}
+                    title={movie.title}
+                    id={movie.id}
+                  />
                 </div>
               );
             })}
           </div>
           <div className="flex justify-center mt-10">
-            <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={onPageChange} />
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={onPageChange}
+            />
           </div>
         </div>
       </div>
     </>
   );
 }
-

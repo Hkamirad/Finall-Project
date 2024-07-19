@@ -52,7 +52,7 @@ export default function Reviews() {
           )}
         </div>
         <div className="text-center">
-        <Pagination currentPage={1} totalPages={2}/>
+          <Pagination currentPage={1} totalPages={2} />
         </div>
       </div>
     </>

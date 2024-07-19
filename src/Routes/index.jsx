@@ -1,8 +1,9 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import SelectedMovie from "../components/openMoviePage/Selectedmoviepage";
 import { loader as moviesLoader } from "./MoviesPageRout";
+import { Loader as openMovieLoader } from "./OpenMoviePageRout";
 import MoviesPageRout from "./MoviesPageRout";
+import OpenMoviePageRout from "./OpenMoviePageRout";
 
 export const Router = createBrowserRouter([
   {
@@ -16,8 +17,9 @@ export const Router = createBrowserRouter([
         loader: moviesLoader,
       },
       {
-        path: "movies/:movieName",
-        element: <SelectedMovie />,
+        path: "movies/:id",
+        element: <OpenMoviePageRout />,
+        loader: openMovieLoader,
       },
 
       {

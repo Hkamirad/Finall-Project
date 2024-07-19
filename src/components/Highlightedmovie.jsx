@@ -2,7 +2,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLocation } from "react-router-dom";
 import Pagination from "./Pagination";
 import { useState, useEffect } from "react";
-import { faPlay, faPlus, faThumbsUp, faVolumeUp } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPlay,
+  faPlus,
+  faThumbsUp,
+  faVolumeUp,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function HighlightedMovie({ movie }) {
   const [currentPage, setCurrentPage] = useState(1);

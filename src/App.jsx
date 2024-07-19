@@ -2,32 +2,10 @@ import "./App.css";
 import { Outlet, useNavigation } from "react-router-dom";
 import Header from "./components/HeaderandFooter/Header";
 import Footer from "./components/HeaderandFooter/Footer";
-import { useEffect } from "react";
 import { Spinner } from "flowbite-react";
 
 function App() {
   const navigation = useNavigation();
-
-  useEffect(() => {
-    const originalTitle = document.title;
-    let dotCount = 0;
-    let interval;
-
-    if (navigation.state === "loading") {
-      interval = setInterval(() => {
-        dotCount = (dotCount + 1) % 4;
-        const dots = ".".repeat(dotCount);
-        document.title = `Loading${dots}`;
-      }, 500);
-    } else {
-      document.title = originalTitle;
-    }
-
-    return () => {
-      clearInterval(interval);
-      document.title = originalTitle;
-    };
-  }, [navigation.state]);
 
   return (
     <>

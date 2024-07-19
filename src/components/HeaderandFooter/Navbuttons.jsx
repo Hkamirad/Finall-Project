@@ -20,7 +20,7 @@ export default function NavButtons() {
           to={nav.path}
           aria-current="page"
           className={`px-2 lg:px-4 py-2 text-xs lg:text-sm  2xl:text-lg font-medium text-white  rounded-lg hover:bg-zinc-900  ${
-            isActive  && "bg-zinc-900"
+            isActive && "bg-zinc-900"
           }`}
         >
           {nav.name}
