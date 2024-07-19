@@ -7,7 +7,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function MovieData({ movie }) {
-  console.log(movie);
   const genres = movie.genres.map((genre) => genre);
   const blackTextCardCreator = (texts = []) => {
     return texts.map((text) => {

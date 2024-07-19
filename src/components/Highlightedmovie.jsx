@@ -37,8 +37,8 @@ export default function HighlightedMovie({ movie }) {
     >
       <div className="absolute inset-0 bg-gradient-to-t from-[#141414ff] to-[#14141400] rounded-lg"></div>
       <div className="absolute bottom-16 lg:bottom-28 2xl:bottom-32 inset-x-0 flex flex-col gap-4 items-center text-white">
-        <h3 className="text-2xl lg:text-3xl 2xl:text-4xl">{name}</h3>
-        <p className="hidden lg:block text-center text-neutral-400">
+        <h3 className="text-2xl lg:text-3xl 2xl:text-4xl text-center px-10">{name}</h3>
+        <p className="hidden lg:block text-center text-neutral-400 px-10 2xl:px-15">
           {description}
         </p>
         <div className="flex flex-col lg:flex-row gap-4 justify-center items-center">
