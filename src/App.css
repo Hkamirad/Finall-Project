@@ -1,3 +1,7 @@
 .blackCard {
   @apply bg-neutral-900 rounded-lg border border-neutral-700;
 }
+.shadow-highlighted {
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1), 0 6px 12px rgba(255, 255, 255, 0.1);
+}
+

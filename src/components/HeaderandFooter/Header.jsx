@@ -7,10 +7,10 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import Search from "./Search";
 
 export default function Header() {
   const [showSearchInput, setShowSearchInput] = useState(false);
-
   const [dropDownStatus, setDropDownStatus] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
 
@@ -34,23 +34,10 @@ export default function Header() {
                 isClicked ? "text-red-600" : "text-white"
               }`}
             />
-            <FontAwesomeIcon
-              icon={faMagnifyingGlass}
-              className="text-white cursor-pointer transition duration-200 transform hover:text-gray-400 hover:scale-110"
-              onClick={() => {
-                setShowSearchInput(!showSearchInput);
-              }}
+            <Search
+              showSearchInput={showSearchInput}
+              setShowSearchInput={setShowSearchInput}
             />
-
-            {showSearchInput && (
-              <input
-                autoFocus
-                onBlur={() => {
-                  setShowSearchInput(!showSearchInput);
-                }}
-                className=" bg-neutral-700  rounded-lg px-1  lg:max-w-44"
-              ></input>
-            )}
           </div>
 
           <div className="flex gap-3 items-center lg:hidden  ">
@@ -64,23 +51,10 @@ export default function Header() {
               }}
               className="cursor-pointer transition duration-200 transform hover:text-gray-400 hover:scale-110"
             />
-            <FontAwesomeIcon
-              icon={faMagnifyingGlass}
-              onClick={() => {
-                setShowSearchInput(!showSearchInput);
-              }}
-              className="text-white cursor-pointer transition duration-200 transform hover:text-gray-400 hover:scale-110"
+            <Search
+              showSearchInput={showSearchInput}
+              setShowSearchInput={setShowSearchInput}
             />
-
-            {showSearchInput && (
-              <input
-                autoFocus
-                onBlur={() => {
-                  setShowSearchInput(!showSearchInput);
-                }}
-                className=" bg-neutral-700  rounded-lg text-xs  p-1  max-w-28"
-              ></input>
-            )}
           </div>
           {dropDownStatus && (
             <div className="absolute top-16 right-4 text-center bg-stone-950 border border-stone-700 rounded-lg shadow-lg p-4 z-50">

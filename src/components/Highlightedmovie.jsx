@@ -32,7 +32,7 @@ export default function HighlightedMovie({ movie }) {
 
   return (
     <div
-      className="relative bg-cover bg-center h-468 lg:h-709 2xl:h-835 rounded-lg mb-10"
+      className="relative bg-cover bg-center h-468 lg:h-709 2xl:h-835 rounded-lg mb-10 shadow-highlighted "
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="absolute inset-0 bg-gradient-to-t from-[#141414ff] to-[#14141400] rounded-lg"></div>
