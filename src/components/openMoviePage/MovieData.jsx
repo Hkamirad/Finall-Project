@@ -20,14 +20,14 @@ export default function MovieData({ movie }) {
   const ratingCreator = (imdb, metaScore) => {
     return (
       <>
-        <div className="blackCard px-4 py-2 lg:px-7  text-sm">
+        <div className="blackCard px-3 py-2 lg:px-4  text-sm">
           <p className="text-center">IMDB</p>
           <div className="flex items-center justify-center text-neutral-400  ">
             <p>{imdb} / 10</p>
           </div>
         </div>
         <div className="blackCard px-2 py-2 lg:px-4  text-sm">
-          <p className="text-center">metaScore</p>
+          <p className="text-center">MetaScore</p>
           <div className="flex items-center justify-center text-neutral-400 gap-1 ">
             <p>{metaScore} / 100</p>
           </div>
@@ -56,7 +56,7 @@ export default function MovieData({ movie }) {
         <h5 className="text-neutral-400 mb-2 lg:mb-2">
           <FontAwesomeIcon icon={faStar} /> Ratings
         </h5>
-        <div className=" flex gap-4 lg:gap-6 flex-wrap">
+        <div className=" flex gap-3 lg:gap-4 flex-wrap">
           {ratingCreator(movie.imdb_rating, movie.metascore)}
         </div>
       </div>
