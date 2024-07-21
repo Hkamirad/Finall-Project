@@ -2,8 +2,10 @@ import { Navigate, createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import { loader as moviesLoader } from "./MoviesPageRout";
 import { Loader as openMovieLoader } from "./OpenMoviePageRout";
+import { Loader as SearchLoader } from "./SearchPageRout";
 import MoviesPageRout from "./MoviesPageRout";
 import OpenMoviePageRout from "./OpenMoviePageRout";
+import SearchPageRout from "./SearchPageRout";
 
 export const Router = createBrowserRouter([
   {
@@ -20,6 +22,11 @@ export const Router = createBrowserRouter([
         path: "movies/:id",
         element: <OpenMoviePageRout />,
         loader: openMovieLoader,
+      },
+      {
+        path: "movies/search",
+        element: <SearchPageRout />,
+        loader: SearchLoader
       },
 
       {

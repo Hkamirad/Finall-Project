@@ -4,20 +4,21 @@ import {
   faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { getSerachedMovie } from "../../api/searchMovie";
+import { useState, useEffect } from "react";
 
 export default function Search({ showSearchInput, setShowSearchInput }) {
   const [movieSearchedName, setMovieSerachedName] = useState();
+  const [searchedMovie, setSearchedMovie] = useState();
+  const navigate = useNavigate();
+
   const handleSearch = (movieName) => {
-    getSerachedMovie(movieName)
-      .then((resp) => {
-        console.log(resp);
-      })
-      .catch((er) => {
-        console.log(er);
-      });
+    setSearchedMovie(movieName);
   };
+  useEffect(() => {
+    if (searchedMovie) {
+      navigate(`/movies/search?query=${movieSearchedName}`);
+    }
+  }, [searchedMovie]);
   return (
     <>
       <FontAwesomeIcon
@@ -39,14 +40,17 @@ export default function Search({ showSearchInput, setShowSearchInput }) {
             }}
             onKeyDown={(e) => {
               if (e.key === "Enter") {
-                handleSearch();
+                handleSearch(movieSearchedName);
               }
             }}
             className=" bg-neutral-700  rounded-lg text-xs lg:text-base  p-1  max-w-28  lg:max-w-44"
           />
           <FontAwesomeIcon
-            className="bg-neutral-600 border  rounded-full p-1 text-xs lg:text-base lg:p-2 text-white hover:cursor-pointer hover:scale-105"
+            className="bg-neutral-600 border  rounded-full p-1 text-xs lg:text-sm lg:p-2 text-white hover:cursor-pointer hover:scale-105"
             icon={faArrowRight}
+            onClick={() => {
+              handleSearch(movieSearchedName);
+            }}
           />
         </div>
       )}
