@@ -12,8 +12,16 @@ export async function loader({ request }) {
 export default function MoviesPageRout() {
   const { movies, metaData, page } = useLoaderData();
   const [searchParams, setSearchParams] = useSearchParams();
+  const scrollToOurmovies = () => {
+    if (window.innerWidth < 1024) {
+      window.scrollTo({ top: 530 });
+    } else {
+      window.scrollTo({ top: 800 });
+    }
+  };
   const onPageChange = (page) => {
     setSearchParams({ page });
+    scrollToOurmovies();
   };
   return (
     <MoviesPage

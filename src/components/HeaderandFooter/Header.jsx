@@ -12,7 +12,7 @@ import Search from "./Search";
 export default function Header() {
   const [showSearchInput, setShowSearchInput] = useState(false);
   const [dropDownStatus, setDropDownStatus] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState(true);
 
   return (
     <>
