@@ -5,7 +5,8 @@ import { useLoaderData } from "react-router-dom";
 export async function Loader({ request }) {
   const url = new URL(request.url);
   const searchedMovie = url.searchParams.get("query");
-  const { data } = await getSerachedMovie(searchedMovie);
+  const decodedMovie = decodeURIComponent(searchedMovie);
+  const { data } = await getSerachedMovie(decodedMovie);
   return { movies: data.data };
 }
 export default function SearchPageRout() {

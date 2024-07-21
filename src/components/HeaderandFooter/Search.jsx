@@ -16,7 +16,9 @@ export default function Search({ showSearchInput, setShowSearchInput }) {
   };
   useEffect(() => {
     if (searchedMovie) {
-      navigate(`/movies/search?query=${movieSearchedName}`);
+      const encodeSearchedMovie = encodeURIComponent(searchedMovie);
+      navigate(`/movies/search?query=${encodeSearchedMovie}`);
+      setMovieSerachedName("");
     }
   }, [searchedMovie]);
   return (
@@ -43,10 +45,13 @@ export default function Search({ showSearchInput, setShowSearchInput }) {
                 handleSearch(movieSearchedName);
               }
             }}
+            // onBlur={() => {
+            //   setShowSearchInput(!showSearchInput);
+            // }}
             className=" bg-neutral-700  rounded-lg text-xs lg:text-base  p-1  max-w-28  lg:max-w-44"
           />
           <FontAwesomeIcon
-            className="bg-neutral-600 border  rounded-full p-1 text-xs lg:text-sm lg:p-2 text-white hover:cursor-pointer hover:scale-105"
+            className="bg-neutral-600 border  rounded-full p-1 text-xs lg:text-sm  text-white hover:cursor-pointer hover:scale-105"
             icon={faArrowRight}
             onClick={() => {
               handleSearch(movieSearchedName);

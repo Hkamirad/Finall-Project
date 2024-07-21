@@ -8,23 +8,22 @@ export default function SearchPage({ movies }) {
           {" "}
           Search results
         </div>
-        <div className="grid grid-cols-2 mt-7 md:grid-cols-3 lg:grid-cols-4 gap-3 2xl:gap-5 ">
-          {movies.length > 0 ? (
-            movies.map((movie) => {
-              return (
-                <>
-                  <MovieCard
-                    title={movie.title}
-                    poster={movie.poster}
-                    id={movie.id}
-                  />
-                </>
-              );
-            })
-          ) : (
-            <p className="text-white"> sorry,the movie you have searched does not exsit</p>
-          )}
-        </div>
+        {movies.length > 0 ? (
+          <div className="grid grid-cols-2 mt-7 md:grid-cols-3 lg:grid-cols-4 gap-3 2xl:gap-5">
+            {movies.map((movie) => (
+              <MovieCard
+                key={movie.id}
+                title={movie.title}
+                poster={movie.poster}
+                id={movie.id}
+              />
+            ))}
+          </div>
+        ) : (
+          <p className="text-white my-6">
+            Sorry, the movie you have searched for, does not exist! 
+          </p>
+        )}
       </div>
       <FreeTrial />
     </>
