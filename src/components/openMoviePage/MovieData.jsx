@@ -11,7 +11,10 @@ export default function MovieData({ movie }) {
   const blackTextCardCreator = (texts = []) => {
     return texts.map((text) => {
       return (
-        <div className="blackCard p-2 inline-block text-xs lg:text-sm">
+        <div
+           key={Math.random() * 100 + Math.random()}
+          className="blackCard p-2 inline-block text-xs lg:text-sm"
+        >
           <p>{text}</p>
         </div>
       );

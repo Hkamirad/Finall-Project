@@ -2,6 +2,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faStar } from "@fortawesome/free-solid-svg-icons";
 import Pagination from "../Pagination";
 export default function Reviews() {
+  const onPageChange = () => {
+    console.log("man hanooz tarif nashodam :(");
+  };
   const reviewCreator = (name, country, review) => {
     return (
       <>
@@ -52,7 +55,11 @@ export default function Reviews() {
           )}
         </div>
         <div className="text-center">
-          <Pagination currentPage={1} totalPages={2} />
+          <Pagination
+            currentPage={1}
+            totalPages={2}
+            onPageChange={onPageChange}
+          />
         </div>
       </div>
     </>

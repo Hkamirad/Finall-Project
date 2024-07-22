@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export default function Search({ showSearchInput, setShowSearchInput }) {
-  const [movieSearchedName, setMovieSerachedName] = useState();
-  const [searchedMovie, setSearchedMovie] = useState();
+  const [movieSearchedName, setMovieSerachedName] = useState('');
+  const [searchedMovie, setSearchedMovie] = useState('');
   const navigate = useNavigate();
 
   const handleSearch = (movieName) => {
